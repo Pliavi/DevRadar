@@ -20,7 +20,7 @@ function App() {
     }
 
     loadDevs()
-  }, [devs])
+  }, [])
 
   async function handleAddDev(data) {
     const respose = await api.post('/devs', data)

@@ -1,8 +1,10 @@
 import React, {useState, useEffect} from "react";
+import SelectInput from "../SelectInput";
+import axios from "axios";
 
 function DevForm({onSubmit}) {
   const [github_username, setGithubUsername] = useState('')
-  const [techs, setTechs] = useState('')
+  const [techs, setTechs] = useState([])
   const [latitude, setLatitude] = useState('')
   const [longitude, setLongitude] = useState('')
 
@@ -29,7 +31,22 @@ function DevForm({onSubmit}) {
     })
 
     setGithubUsername('')
-    setTechs('')
+    setTechs([])
+  }
+
+  useEffect(() => { callGithub() }, [])
+  function callGithub(){
+    const code = new URLSearchParams(window.location.search).get("code")
+
+    if(code) {
+      const params = `client_id=603fd0d5f335bab20467&client_secret=a12c792fd70900c01d27c72fe942914da20c087e&code=${code}`
+
+      axios.post(`https://github.com/login/oauth/access_token?${params}`)
+      .then(response => {
+        const token = response.data.access_token
+        console.log(token)
+      })
+    }
   }
 
   return (
@@ -43,17 +60,18 @@ function DevForm({onSubmit}) {
           onChange={e => setGithubUsername(e.target.value)}
           required
         />
+        <a type="button" href="https://github.com/login/oauth/authorize?client_id=603fd0d5f335bab20467">Tentar com seu login</a>
       </div>
 
       <div className="input-block">
         <label htmlFor="techs">Tecnologias</label>
-        <input
-          name="techs"
-          id="techs"
-          value={techs}
-          onChange={e => setTechs(e.target.value)}
-          required
-        />
+        <SelectInput value={techs} onChange={value => setTechs(value)}/>
+      </div>
+
+      <div className="input-block">
+        <div className="map">
+          {/* TODO: Colocar o mapa aqui */}
+        </div>
       </div>
 
       <div className="input-group">
@@ -65,6 +83,7 @@ function DevForm({onSubmit}) {
             type="number"
             value={latitude}
             onChange={e => setLatitude(e.target.value)}
+            disabled
             required
           />
         </div>
@@ -76,6 +95,7 @@ function DevForm({onSubmit}) {
             type="number"
             value={longitude}
             onChange={e => setLongitude(e.target.value)}
+            disabled
             required
           />
         </div>
