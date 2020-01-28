@@ -11,7 +11,7 @@ module.exports = {
   },
 
   async store(request, response) {
-    const { github_username, techs, latitude, longitude } = request.body
+    const { github_username, techs, latitude, longitude, contact_accounts } = request.body
 
     let dev = await Dev.findOne({ github_username })
 
@@ -33,6 +33,7 @@ module.exports = {
         avatar_url,
         bio,
         techs: techsArray,
+        contact_accounts,
         location
       })
 
