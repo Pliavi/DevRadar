@@ -20,11 +20,12 @@ Aprender e aprimorar os conhecimentos em aula é muito bom, mas desafios são ai
  - [ ] Fazer um cadastro à partir da conta do próprio usuário do Github
    - [ ] Não permitir terceiros cadastrar usuários
    - [ ] Apenas um superusuário poderá adicionar/remover usuários
- - [ ] Adicionar mais campos, com contato (email e redes sociais)
+ - [x] Adicionar mais campos, com contato (email e redes sociais)
 
 ### Web (Frontend)
  - [ ] Permitir o usuário colocar sua localização clicando no mapa
  - [ ] Permitir buscar usuários pela versão web
+ - [ ] Adicionar mais campos, com contato (email e redes sociais)
 
 ### Mobile
  - [ ] Voltar a busca de tecnologias para a parte de baixo, e mover quando o teclado aparecer
