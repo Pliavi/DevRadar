@@ -1,6 +1,5 @@
 const axios = require("axios");
 const Dev = require("../models/Dev");
-const parseStringAsArray = require("../utils/parseStringAsArray");
 const { findConnections, sendMessage } = require("../websocket");
 
 module.exports = {
