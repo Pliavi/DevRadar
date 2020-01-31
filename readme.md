@@ -1,5 +1,8 @@
 # Dev Radar
+
 ## Semana Omnistack - Rocketseat
+
+### Novo design! Veja no [Figma!][linkfigma] e opine nas issues!
 
 Neste repositório está o projeto feito na Semana Omnistack da Rocketseat, com o projeto Dev Radar.
 
@@ -16,17 +19,22 @@ Olhando o projeto achei ele bem legal e quero fazer alguma adições, assim como
 Aprender e aprimorar os conhecimentos em aula é muito bom, mas desafios são ainda melhores! :stuck_out_tongue_closed_eyes::metal:
 
 ### Backend
- - [ ] Completar CRUD
- - [ ] Fazer um cadastro à partir da conta do próprio usuário do Github
-   - [ ] Não permitir terceiros cadastrar usuários
-   - [ ] Apenas um superusuário poderá adicionar/remover usuários
- - [x] Adicionar mais campos, com contato (email e redes sociais)
+
+- [ ] Completar CRUD
+- [ ] Fazer um cadastro à partir da conta do próprio usuário do Github
+  - [ ] Não permitir terceiros cadastrar usuários
+  - [ ] Apenas um superusuário poderá adicionar/remover usuários
+- [x] Adicionar mais campos, com contato (email e redes sociais)
 
 ### Web (Frontend)
- - [ ] Permitir o usuário colocar sua localização clicando no mapa
- - [ ] Permitir buscar usuários pela versão web
- - [ ] Adicionar mais campos, com contato (email e redes sociais)
+
+- [ ] Permitir o usuário colocar sua localização clicando no mapa
+- [ ] Permitir buscar usuários pela versão web
+- [ ] Adicionar mais campos, com contato (email e redes sociais)
 
 ### Mobile
- - [ ] Voltar a busca de tecnologias para a parte de baixo, e mover quando o teclado aparecer
- - [ ] Permitir o cadastro do usuário via mobile
+
+- [ ] Voltar a busca de tecnologias para a parte de baixo, e mover quando o teclado aparecer
+- [ ] Permitir o cadastro do usuário via mobile
+
+[linkfigma]: https://www.figma.com/file/egY9IsDfidPqKC6LQNJk4j/Week10?node-id=0%3A1
